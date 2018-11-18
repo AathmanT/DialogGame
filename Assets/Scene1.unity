@@ -20575,8 +20575,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83078c61b81c2644297da847e6d768a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveLeft: 97
-  moveRight: 100
+  moveLeft: 276
+  moveRight: 275
   horizontalVelocity: 0
   laneNumber: 2
   controlLocked: 0
