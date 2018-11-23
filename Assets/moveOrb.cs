@@ -58,10 +58,15 @@ public class moveOrb : MonoBehaviour
             GM.lvlCompleteStatus = "You Won";
             SceneManager.LoadScene("LevelComplete");
         }
-	}
+		 if(other.gameObject.tag=="coin"){
 
-	void OnCollisionEnter(Collision other) {
+            Destroy(other.gameObject);
+            GM.coinTotal += 1;
+        }
+			if (other.gameObject.name=="Capsule") {
 
+			Destroy(other.gameObject);
+		}
 		if (other.gameObject.tag == "lethal")
 		{
 			Destroy(gameObject);
@@ -69,17 +74,15 @@ public class moveOrb : MonoBehaviour
             GM.lvlCompleteStatus = "Fail";
             Instantiate(boomObject,transform.position,boomObject.rotation);
 		}
+	}
 
-		if (other.gameObject.name=="Capsule") {
+	void OnCollisionEnter(Collision other) {
 
-			Destroy(other.gameObject);
-		}
+		
 
-        if(other.gameObject.tag=="coin"){
+	
 
-            Destroy(other.gameObject);
-            GM.coinTotal += 1;
-        }
+       
 
 
 	}
